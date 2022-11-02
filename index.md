@@ -4,47 +4,59 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am a Ph.D. student at Control Lab, School of EE, KAIST.
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Control:** model predictive control, data-driven model learning
+- **Robotics:** robot visualization, robot localization
+- **Computer Vision:** image recognition, object detection 
+- **Machine Learning:** reinforcement learning, fairness and transparency in machine learning
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Sept. 2022]** Our paper about leanring fair and flexible data representations is accepted to IEEE Access.
 
 ## Publications
 
-- **Mnemonics Training: Multi-Class Incremental Learning without Forgetting**
+- **Learning Flexible and Fair Data Representations**
   <br>
-  **Yaoyao Liu**, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+  **Muhammad Usama** and Dong Eui Chang
   <br>
-  IEEE Conference on Computer Vision and Pattern Recognition. **CVPR 2020**.
+  IEEE Access, Volume 10, 2022. **IEEE Access 2022**.
   <br>
-  [[PDF](https://arxiv.org/pdf/2002.10211.pdf)] [[Code](https://github.com/yaoyao-liu/mnemonics)] <strong><i style="color:#e74d3c">Oral Presentation</i></strong>
+  [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9895225)]
 
-- **Learning to Self-Train for Semi-Supervised Few-Shot Classification**
-  <br>
-  Xinzhe Li, Qianru Sun, **Yaoyao Liu**, Shibao Zheng, Qin Zhou, Tat-Seng Chua, Bernt Schiele
-  <br>
-  33rd Conference on Neural Information Processing Systems. **NeurIPS 2019**.
-  <br>
-  [[PDF](http://papers.nips.cc/paper/9216-learning-to-self-train-for-semi-supervised-few-shot-classification.pdf)] [[Code](https://github.com/xinzheli1217/learning-to-self-train)]
 
-- **Meta-Transfer Learning for Few-Shot Learning**
+- **Learning-Driven Exploration for Reinforcement Learning**
   <br>
-  Qianru Sun\*, **Yaoyao Liu\***, Tat-Seng Chua, Bernt Schiele
+  **Muhammad Usama** and Dong Eui Chang
   <br>
-  IEEE Conference on Computer Vision and Pattern Recognition. **CVPR 2019**.
+  2021 21st International Conference on Control, Automation and Systems (ICCAS). **ICCAS 2021**.
   <br>
-  [[PDF](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sun_Meta-Transfer_Learning_for_Few-Shot_Learning_CVPR_2019_paper.pdf)] [[Code](https://github.com/yaoyao-liu/meta-transfer-learning)] [[Project](https://mtl.yyliu.net/)]
+  [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9649810)] [[Video](https://www.youtube.com/watch?v=nJggIjjzKic)] [[Code](https://github.com/Usama1002/EBE-Exploration)]
 
-## Services
+- **Robotic Navigation using Entropy-Based Exploration**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  2019 19th International Conference on Control, Automation and Systems (ICCAS). **ICCAS 2019**.
+  <br>
+  [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8971638)] [[Video](https://www.youtube.com/watch?v=NHT-EiN_4n8&t=7s)]
 
-- Conference Reviewers: NeurIPS 2020, CVPR 2020.
-- Journal Reviewers: T-PAMI, IJCV.
+- **Control of Furuta Pendulum with Reinforcement Learning**
+  <br>
+  Dohyeok Lee, **Muhammad Usama** and Dong Eui Chang
+  <br>
+  19th International Conference on Control, Automation, and Systems. **ICROS 2019**.
+  <br>
+  [[PDF](https://koasas.kaist.ac.kr/handle/10203/268603)] [[Video](https://www.youtube.com/watch?v=a6W6u8iMDU8)] 
+
+- **Towards Robust Neural Networks with Lipschitz Continuity**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  17th International Workshop on Digital Forensics and Watermarking. **IWDW 2018**.
+  <br>
+  [[PDF](https://arxiv.org/abs/1811.09008)]
+
