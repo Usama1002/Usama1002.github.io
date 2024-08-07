@@ -11,13 +11,39 @@ I am a Ph.D. student at Control Lab, School of EE, KAIST.
 - **Control:** model predictive control, data-driven model learning
 - **Robotics:** robot visualization, robot localization
 - **Computer Vision:** image recognition, object detection 
-- **Machine Learning:** reinforcement learning, fairness and transparency in machine learning
+- **Machine Learning:** reinforcement learning, fairness, and transparency in machine learning
 
 ## News
 
-- **[Sept. 2022]** Our paper about leanring fair and flexible data representations is accepted to IEEE Access.
+- **[Sept. 2022]** IEEE Access accepts our paper about learning fair and flexible data representations.
 
 ## Publications
+
+- **Particle Swarm Optimization for DFE Structure Optimization with Neural Fitness Evaluation**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  2024 Summer Annual Conference of IEIE.
+
+- **Representation Learning for Distortion Classification in DRAM Data**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  39th Institute of Control, Robotics and Systems (ICROS) Conference. **ICROS 2024**.
+
+- **Optimization of Decision Feedback Equalizer Structure through Genetic Algorithm and Neural Network Evaluation**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  39th Institute of Control, Robotics and Systems (ICROS) Conference. **ICROS 2024**.
+
+- **PyEye: An Integrated Approach for Signal Integrity Assessment and Eye Diagram Generation**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  2023 IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia). **ICCE-Asia 2023**.
+  <br>
+  [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9895225)]
 
 - **Learning Flexible and Fair Data Representations**
   <br>
