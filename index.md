@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at Control Lab, School of EE, KAIST.
+I am a Ph.D. student at the Control Lab, KAIST, passionate about generative AI, machine learning, and intelligent robotics. My experience spans generative models, deep learning, anomaly detection, reinforcement learning, and autonomous robotics. I have a proven track record in research, publications, industrial collaborations, and AI competitions, demonstrating my commitment and expertise.
 
 ## Research Interests
 
