@@ -45,6 +45,14 @@ I am a Ph.D. student at Control Lab, School of EE, KAIST.
   <br>
   [[PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9895225)]
 
+- **Learning-Based Control of Quadrotor using Gaussian Processes**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  6th Joint Conference of Korean Artificial Intelligence Association (CKAIA). **CKAIA 2022**.
+  <br>
+  Recipient of Special Society Award (학회 특별상) worth 1 million KRW.
+
 - **Learning Flexible and Fair Data Representations**
   <br>
   **Muhammad Usama** and Dong Eui Chang
