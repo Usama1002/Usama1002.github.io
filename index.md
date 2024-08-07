@@ -8,10 +8,10 @@ I am a Ph.D. student at Control Lab, School of EE, KAIST.
 
 ## Research Interests
 
+- **Machine Learning:** generative models, reinforcement learning, fairness, and transparency in machine learning
+- **Computer Vision:** image recognition, object detection, and machine vision 
 - **Control:** model predictive control, data-driven model learning
 - **Robotics:** robot visualization, robot localization
-- **Computer Vision:** image recognition, object detection 
-- **Machine Learning:** reinforcement learning, fairness, and transparency in machine learning
 
 ## News
 
