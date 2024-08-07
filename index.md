@@ -6,12 +6,20 @@ layout: homepage
 
 I am a Ph.D. student at the Control Lab, KAIST, passionate about generative AI, machine learning, and intelligent robotics. My experience spans generative models, deep learning, anomaly detection, reinforcement learning, and autonomous robotics. I have a proven track record in research, publications, industrial collaborations, and AI competitions, demonstrating my commitment and expertise.
 
-## Research Interests
+## Professional Expertise
 
 - **Machine Learning:** generative models, reinforcement learning, fairness, and transparency in machine learning
 - **Computer Vision:** image recognition, object detection, and machine vision 
 - **Control:** model predictive control, data-driven model learning
 - **Robotics:** robot visualization, robot localization
+
+## Skills
+
+- **Programming Languages:** Python, C++, MATLAB, LabVIEW
+- **Machine Learning Frameworks:** PyTorch, Pytorch Geometric, TensorFlow, Scikit-learn 
+- **Data Analysis & Processing:** Pandas, NumPy, SciPy, data visualization with Matplotlib and Seaborn
+- **Robotics:** Git, Docker, Kubernetes, cloud platforms (AWS, GCP)
+- **Soft Skills:** Team collaboration, project management, technical writing
 
 ## Publications
 
