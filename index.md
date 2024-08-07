@@ -13,10 +13,6 @@ I am a Ph.D. student at the Control Lab, KAIST, passionate about generative AI, 
 - **Control:** model predictive control, data-driven model learning
 - **Robotics:** robot visualization, robot localization
 
-## News
-
-- **[Sept. 2022]** IEEE Access accepts our paper about learning fair and flexible data representations.
-
 ## Publications
 
 - **Particle Swarm Optimization for DFE Structure Optimization with Neural Fitness Evaluation**
