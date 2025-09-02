@@ -23,6 +23,27 @@ I am a Ph.D. student at the Control Lab, KAIST, passionate about generative AI, 
 
 ## Publications
 
+- **ARD-LoRA: Dynamic Rank Allocation for Parameter-Efficient Fine-Tuning of Foundation Models with Heterogeneous Adaptation Needs**
+  <br>
+  Haseeb Ullah Khan Shinwari and **Muhammad Usama**
+  Equal Contribution
+  <br>
+  IEEE Transactions on Artificial Intelligence, Accepted, September 2025
+  <br>
+  [[PDF](https://arxiv.org/abs/2506.18267)]
+
+- **Uncertainty-Aware DRAM Equalizer Optimization**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  2025 Summer Annual Conference of the Korean Institute of Electromagnetic Engineering and Science (KIEES).
+
+- **Uncertainty-Aware DRAM Equalizer Optimization Using Bayesian Representation Learning and Deployment Risk Assessment**
+  <br>
+  **Muhammad Usama** and Dong Eui Chang
+  <br>
+  2025 Conference on Electronics, Semiconductors, and Artificial Intelligence.
+
 - **Particle Swarm Optimization for DFE Structure Optimization with Neural Fitness Evaluation**
   <br>
   **Muhammad Usama** and Dong Eui Chang
