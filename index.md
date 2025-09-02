@@ -26,7 +26,7 @@ I am a Ph.D. student at the Control Lab, KAIST, passionate about generative AI, 
 - **ARD-LoRA: Dynamic Rank Allocation for Parameter-Efficient Fine-Tuning of Foundation Models with Heterogeneous Adaptation Needs**
   <br>
   Haseeb Ullah Khan Shinwari and **Muhammad Usama**
-  Equal Contribution
+  _(Equal Contribution)_
   <br>
   IEEE Transactions on Artificial Intelligence, Accepted, September 2025
   <br>
