@@ -13,7 +13,7 @@ A PDF version of this CV is available [here]({{ base_path }}/files/Muhammad-Usam
 
 Education
 ======
-* Ph.D. in Electrical Engineering, Korea Advanced Institute of Science and Technology (KAIST), 2019 - 2026 (expected)
+* Ph.D. in Electrical Engineering, Korea Advanced Institute of Science and Technology (KAIST), 2019 - 2026
   * Advisor: Prof. Dong Eui Chang
   * Thesis: Learning Latent Representations for Anomaly Detection and Reinforcement-Learning-Based Equalizer Optimization in High-Speed DRAM Systems
 * M.S. in Electrical Engineering, Korea Advanced Institute of Science and Technology (KAIST), 2017 - 2019

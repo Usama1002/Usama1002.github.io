@@ -1,13 +1,13 @@
 ---
 permalink: /
 title: "Muhammad Usama"
-excerpt: "Muhammad Usama - Ph.D. Candidate, KAIST"
+excerpt: "Muhammad Usama - Ph.D., KAIST"
 author_profile: true
 ---
 
-I am a Ph.D. candidate in the Department of Electrical Engineering at the Korea Advanced Institute of Science and Technology (KAIST), advised by Prof. Dong Eui Chang, expected to complete my degree in August 2026. I also hold an M.S. in Electrical Engineering from KAIST and a B.E. in Electrical Engineering from the National University of Sciences and Technology (NUST), Pakistan.
+I hold a Ph.D. in Electrical Engineering from the Korea Advanced Institute of Science and Technology (KAIST, 2026), advised by Prof. Dong Eui Chang. I also hold an M.S. in Electrical Engineering from KAIST and a B.E. in Electrical Engineering from the National University of Sciences and Technology (NUST), Pakistan.
 
-My research interests span large language models and multi-agent systems, reinforcement learning, signal integrity for high-speed memory systems, and machine learning applications in medicine. My doctoral work focuses on latent representation learning for anomaly detection and reinforcement-learning-based equalizer optimization in high-speed DRAM systems, carried out in collaboration with Samsung DS.
+My research interests span large language models and multi-agent systems, reinforcement learning, signal integrity for high-speed memory systems, and machine learning applications in medicine. My doctoral work focused on latent representation learning for anomaly detection and reinforcement-learning-based equalizer optimization in high-speed DRAM systems, carried out in collaboration with Samsung DS.
 
 Alongside my doctoral research, I currently work as an AI Engineer at [Agent Astro](https://agentastro.ai), where I design AI and data architecture for an FDA regulatory-intelligence platform, and as AI Initiative Team Lead at Braindeck Inc., where I lead work on automatic speech recognition and voice AI for Korean-language users with dysarthria.
 
