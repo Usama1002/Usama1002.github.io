@@ -1,43 +1,238 @@
-# Basic Information 
-title: Muhammad Usama
-position: Ph.D. Student
-affiliation: KAIST EE
-email: usama (at) kaist.ac.kr
-#email: usama1002 (at) proton.me
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve -l -H localhost`. If you change this file, please restart the
+# server process.
 
-# Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-# keywords: muhammad usama
-# description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-# canonical: https://minimal-light.yyliu.net/
+# Basic Site Settings
+locale                   : "en-US"
+site_theme               : "default"
+title                    : "Muhammad Usama"
+title_separator          : "-"
+name                     : &name "Muhammad Usama"
+description              : &description "Personal academic website of Muhammad Usama, Ph.D. candidate in Electrical Engineering at KAIST."
+url                      : https://usama1002.github.io
+baseurl                  : ""
+repository               : "Usama1002/Usama1002.github.io"
 
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/citations?user=OyBykQQAAAAJ&hl=en
-github_link: https://github.com/Usama1002
-# linkedin: https://www.linkedin.com/
+# Site Author - The following control what appear as part of the author content on the side bar.
+author:
+  avatar           : "profile.jpg"
+  name             : "Muhammad Usama"
+  pronouns         :
+  bio              : "Ph.D. Candidate, Electrical Engineering, KAIST"
+  location         : "Seoul, South Korea"
+  employer         : "KAIST"
+  uri              : "https://usama1002.github.io"
+  email            : "usama@kaist.ac.kr"
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/usama.jpg
-favicon: ./assets/img/usama_favicon.png
-favicon_dark: ./assets/img/usama_favicon.png
+  # Academic websites
+  academia         :
+  arxiv            :
+  googlescholar    : "https://scholar.google.com/citations?user=OyBykQQAAAAJ&hl=en"
+  inspire-hep      :
+  impactstory      :
+  orcid            :
+  semantic         :
+  ssrn             :
+  pubmed           :
+  researchgate     :
+  scopus           :
+  zotero           :
+  huggingface      : "usama10"
 
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-# google_analytics: UA-111540567-4
+  # Repositories and software development
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  github           : "Usama1002"
+  kaggle           :
+  stackoverflow    :
 
-# Use this project as a remote theme for GitHub Pages
-# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-remote_theme: yaoyao-liu/minimal-light
+  # Social media
+  artstation       :
+  bluesky          :
+  facebook         :
+  flickr           :
+  foursquare       :
+  goodreads        :
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         : "usama-muhammad-62424125b"
+  mastodon         :
+  medium           :
+  pinterest        :
+  soundcloud       :
+  steam            :
+  telegram         :
+  tumblr           :
+  twitter          :
+  vine             :
+  weibo            :
+  wikipedia        :
+  xing             :
+  youtube          :
+  zhihu            :
 
-# The following files will be removed from the generated website.
+# Publication Category - The following the list of publication categories and their headings
+publication_category:
+  manuscripts:
+    title: 'Journal Articles'
+  conferences:
+    title: 'Conference Papers'
+  underreview:
+    title: 'Under Review / Submitted'
+  patents:
+    title: 'Patents'
+
+# Site Settings
+teaser                   :
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+comments:
+  provider               :
+atom_feed:
+  hide                   : true
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :
+og_description           :
+social:
+  type                   : Person
+  name                   :
+  links:
+
+# Analytics
+analytics:
+  provider               :  false
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
 exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - README_zh_Hans.md
-  - README_zh_Hant.md
-  - README_de.md
   - LICENSE
-  - minimal-light.gemspec
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# These settings control the types of collections used by the template
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
+
+# These settings control how pages and collections are included in the site
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Etc/UTC
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
