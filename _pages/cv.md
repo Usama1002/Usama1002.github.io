@@ -30,8 +30,8 @@ Employment
   * Lead development of a custom automatic speech recognition model for Korean-language users with dysarthria, integrated into a real-time avatar communication platform, along with voice cloning and text-to-speech pipelines.
 * AI Researcher, Tianjin Medical University Eye Hospital, Oct 2025 - Present (Tianjin, China)
   * Develop machine learning models for pediatric myopia progression prediction, cross-domain diabetic retinopathy screening, and ocular surface disease grading.
-* AI Lead, Brain Box Automations, Jul 2025 - Present (Remote)
-  * Develop production AI agent systems using FastAPI, LangGraph, and LangChain, deployed on AWS, GCP, and Azure.
+* AI Lead, Brain Box Automations, Jul 2025 - Sep 2026 (Remote)
+  * Developed production AI agent systems using FastAPI, LangGraph, and LangChain, deployed on AWS, GCP, and Azure.
 * Graduate Student Researcher, KAIST, Aug 2017 - Aug 2026 (Daejeon, South Korea)
   * Machine learning for DRAM signal integrity and equalizer optimization in collaboration with Samsung DS; fairness and transparency in representation learning; deep reinforcement learning for robotic control, applied to a Furuta pendulum, quadcopters, and autonomous ground robots.
 * Freelance AI/ML Developer and Consultant, Self-Employed, Aug 2023 - Sep 2025 (Remote)
