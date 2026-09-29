@@ -1,8 +1,17 @@
 # The following is the order of the links in the header of the website.
 
 main:
+  - title: "Experience"
+    url: /experience/
+
+  - title: "Education"
+    url: /education/
+
   - title: "Publications"
     url: /publications/
 
-  - title: "CV"
-    url: /cv/
+  - title: "Honors"
+    url: /honors/
+
+  - title: "Skills"
+    url: /skills/
