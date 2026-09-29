@@ -24,12 +24,12 @@ Education
 
 Employment
 ======
-* AI Engineer, Agent Astro, May 2026 - Present (Remote, US)
-  * Design the AI and data architecture for an FDA regulatory-intelligence platform, including a retrieval-augmented generation system over FDA 510(k), PMA, and recall data, a knowledge-graph-based device-comparison service, and a multi-agent research pipeline.
 * AI Initiative Team Lead, Braindeck Inc., Oct 2025 - Present (Seoul, South Korea)
-  * Lead development of a custom automatic speech recognition model for Korean-language users with dysarthria, integrated into a real-time avatar communication platform, along with voice cloning and text-to-speech pipelines.
-* AI Researcher, Tianjin Medical University Eye Hospital, Oct 2025 - Present (Tianjin, China)
-  * Develop machine learning models for pediatric myopia progression prediction, cross-domain diabetic retinopathy screening, and ocular surface disease grading.
+  * Lead development of a custom automatic speech recognition model for Korean-language users with dysarthria, integrated into a real-time avatar communication platform with a retrieval-augmented personalized communication tool.
+  * Built an end-to-end pipeline for medically certified diagnosis, rehabilitation, and communication assistance for users with dysarthria, with the backend implemented in FastAPI and deployed on AWS, GCP, and Azure.
+  * Fine-tuned OpenAI Whisper for domain-specific vocabulary and accent adaptation, and built on-premise voice cloning and text-to-speech pipelines using Fish Audio.
+  * Designed a multimodal emotion recognition system fusing speech, facial expressions, and biosignals.
+  * Built a two-stage cascade classifier (LightGBM and Random Forest) for acoustic non-destructive testing of industrial fasteners for a Korean manufacturer, replacing a rule-based quality-control system.
 * AI Lead, Brain Box Automations, Jul 2025 - Sep 2026 (Remote)
   * Developed production AI agent systems using FastAPI, LangGraph, and LangChain, deployed on AWS, GCP, and Azure.
 * Graduate Student Researcher, KAIST, Aug 2017 - Aug 2026 (Daejeon, South Korea)

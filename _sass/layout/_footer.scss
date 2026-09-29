@@ -17,8 +17,8 @@
   /* keep footer in normal document flow so custom widgets do not overlap content */
   height: auto;
 
-  /* keep the footer on the bottom of the page */
-  position: fixed;
+  /* anchored to the bottom of the document; _main.js reserves matching body margin */
+  position: absolute;
   bottom: 0;
 
   -webkit-animation: intro 0.3s both;
@@ -54,14 +54,6 @@
   .far,
   .fal {
     color: var(--global-text-color-light);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* don't pin the footer on mobile devices */
-  .page__footer {
-    position: relative;
-    bottom: auto;
   }
 }
 
