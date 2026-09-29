@@ -1,0 +1,60 @@
+/* ==========================================================================
+   NEWS (home page)
+   ========================================================================== */
+
+@include breakpoint($x-large) {
+  .home-with-news .page {
+    padding-right: 0;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    column-gap: 2.5em;
+    align-items: start;
+  }
+}
+
+.news {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--global-border-color);
+
+  @include breakpoint($x-large) {
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1.5em;
+    border-top: 0;
+    border-left: 1px solid var(--global-border-color);
+  }
+}
+
+.news__title {
+  margin: 0 0 0.75em;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: $type-size-4;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0 0.5em 0 0;
+  list-style: none;
+  max-height: 32em;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-border-color) transparent;
+}
+
+/* .news prefix outranks the theme's `.page__content li { font-size: 1em }` */
+.news .news__item {
+  margin-bottom: 0.9em;
+  font-size: 0.85em;
+  line-height: 1.45;
+}
+
+.news__date {
+  display: block;
+  font-weight: bold;
+  color: var(--global-text-color-light);
+}
