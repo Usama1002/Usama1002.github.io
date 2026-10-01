@@ -9,7 +9,7 @@ Personal academic website, built on the [Academic Pages](https://github.com/acad
 - `_pages/experience.md`, `education.md`, `honors.md`, `skills.md` - one page per CV section, linked from the top menu (`_data/navigation.yml`). Service entries are at the bottom of the Experience page.
 - `_publications/` - one Markdown file per paper or patent. Front matter fields:
   - `category`: `manuscripts` (journal articles), `conferences`, `underreview`, or `patents` - controls which section it appears in on `/publications/`.
-  - `paperurl`, `codeurl`, `videourl`, `slidesurl`, `bibtexurl` - optional links shown under the citation.
+  - `paperurl`, `arxivurl`, `codeurl`, `videourl`, `slidesurl`, `bibtexurl` - optional links shown under the citation.
 - `_data/news.yml` - the News column on the home page, newest first. Each item has a `date` (e.g. "Sep 2026") and a one-sentence Markdown `text`. The column scrolls, so older items can stay.
 - `files/Muhammad-Usama-CV.pdf` - downloadable PDF CV (a website-specific build), linked from the home and Experience pages.
 - `images/profile.jpg` - sidebar photo.

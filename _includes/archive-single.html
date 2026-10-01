@@ -55,11 +55,12 @@
     {% endif %}
 
     {% capture paper_link %}{% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}{% endcapture %}
+    {% capture arxiv_link %}{% if post.arxivurl %}<a href="{{ post.arxivurl }}">arXiv</a>{% endif %}{% endcapture %}
     {% capture code_link %}{% if post.codeurl %}<a href="{{ post.codeurl }}">Code</a>{% endif %}{% endcapture %}
     {% capture video_link %}{% if post.videourl %}<a href="{{ post.videourl }}">Video</a>{% endif %}{% endcapture %}
     {% capture slides_link %}{% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}{% endcapture %}
     {% capture bibtex_link %}{% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}{% endcapture %}
-    {% assign link_parts = paper_link | append: "|" | append: code_link | append: "|" | append: video_link | append: "|" | append: slides_link | append: "|" | append: bibtex_link | split: "|" %}
+    {% assign link_parts = paper_link | append: "|" | append: arxiv_link | append: "|" | append: code_link | append: "|" | append: video_link | append: "|" | append: slides_link | append: "|" | append: bibtex_link | split: "|" %}
     {% assign pub_links = "" %}
     {% for part in link_parts %}{% if part != "" %}{% if pub_links != "" %}{% assign pub_links = pub_links | append: " &middot; " %}{% endif %}{% assign pub_links = pub_links | append: part %}{% endif %}{% endfor %}
     {% if post.citation %}
