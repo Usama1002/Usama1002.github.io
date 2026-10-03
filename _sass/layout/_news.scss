@@ -58,3 +58,14 @@
   font-weight: bold;
   color: var(--global-text-color-light);
 }
+
+.news__links {
+  white-space: nowrap;
+
+  a {
+    text-decoration: none;
+
+    &::before { content: "["; color: var(--global-text-color-light); }
+    &::after { content: "]"; color: var(--global-text-color-light); }
+  }
+}

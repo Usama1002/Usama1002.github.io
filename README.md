@@ -10,7 +10,7 @@ Personal academic website, built on the [Academic Pages](https://github.com/acad
 - `_publications/` - one Markdown file per paper or patent. Front matter fields:
   - `category`: `manuscripts` (journal articles), `conferences`, `underreview`, or `patents` - controls which section it appears in on `/publications/`.
   - `paperurl`, `arxivurl`, `codeurl`, `videourl`, `slidesurl`, `bibtexurl` - optional links shown under the citation.
-- `_data/news.yml` - the News column on the home page, newest first. Each item has a `date` (e.g. "Sep 2026") and a one-sentence Markdown `text`. The column scrolls, so older items can stay.
+- `_data/news.yml` - the News column on the home page, newest first. Each item has a `date` (e.g. "Sep 2026") and a one-sentence Markdown `text`. Add `pub: <publication slug>` to show that paper's [Paper]/[arXiv] and [Code] links automatically, or `links:` (label/url pairs) for non-paper items. The column scrolls, so older items can stay.
 - `files/Muhammad-Usama-CV.pdf` - downloadable PDF CV (a website-specific build), linked from the home and Experience pages.
 - `images/profile.jpg` - sidebar photo.
 

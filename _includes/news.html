@@ -2,9 +2,21 @@
   <h2 id="news-heading" class="news__title">News</h2>
   <ul class="news__list">
     {% for item in site.data.news %}
+    {% assign pub = nil %}
+    {% if item.pub %}
+      {% assign pub_url = "/publication/" | append: item.pub %}
+      {% assign pub = site.publications | where: "url", pub_url | first %}
+    {% endif %}
     <li class="news__item">
       <span class="news__date">{{ item.date }}</span>
       <span class="news__text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+      {% if pub.paperurl or pub.arxivurl or pub.codeurl or item.links %}
+      <span class="news__links">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}">Paper</a>{% elsif pub.arxivurl %}<a href="{{ pub.arxivurl }}">arXiv</a>{% endif %}
+        {% if pub.codeurl %}<a href="{{ pub.codeurl }}">Code</a>{% endif %}
+        {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+      </span>
+      {% endif %}
     </li>
     {% endfor %}
   </ul>

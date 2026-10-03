@@ -1,35 +1,56 @@
-# Newest first. `text` is Markdown; keep each item to one short sentence.
+# Newest first. `text` is one short Markdown sentence.
+# `pub` (optional): a publication slug in _publications/. Its paperurl (or arxivurl) and codeurl
+#   are shown as [Paper]/[arXiv] and [Code] links after the text.
+# `links` (optional): extra links for items that are not publications, as {label, url}.
 - date: "Sep 2026"
-  text: "Paper on [capability preservation during GRPO reasoning training](/publication/2026-09-28-grpo-tax) published in *Transactions on Machine Learning Research* ([code](https://github.com/Usama1002/GRPO-Capability-Tax))."
+  text: "Paper on [capability preservation during GRPO reasoning training](/publication/2026-09-28-grpo-tax) published in *Transactions on Machine Learning Research*."
+  pub: 2026-09-28-grpo-tax
 - date: "Sep 2026"
   text: "Paper on [graph-guided layer fusion for LLM compression](/publication/2026-01-01-graph-guided-layer-fusion-neurips) accepted at NeurIPS 2026."
+  pub: 2026-01-01-graph-guided-layer-fusion-neurips
 - date: "Sep 2026"
   text: "Paper on [pediatric myopia progression prediction](/publication/2026-09-26-pediatric-myopia-progression) published in *Journal of Translational Medicine*."
+  pub: 2026-09-26-pediatric-myopia-progression
 - date: "Sep 2026"
-  text: "Preprint of [The System Prompt Illusion](/publication/2026-01-01-system-prompt-illusion) released on [arXiv](https://arxiv.org/abs/2609.38205)."
+  text: "Preprint of [The System Prompt Illusion](/publication/2026-01-01-system-prompt-illusion) released on arXiv."
+  pub: 2026-01-01-system-prompt-illusion
 - date: "Aug 2026"
-  text: "Completed my Ph.D. in Electrical Engineering at KAIST ([thesis](https://www.dropbox.com/scl/fi/s7i3v4weorau1520bexan/main.pdf?rlkey=7m19gjj7heujq4jqck7wuhaic&st=pwke8ykf&dl=0))."
+  text: "Completed my Ph.D. in Electrical Engineering at KAIST."
+  links:
+    - label: "Thesis"
+      url: "https://www.dropbox.com/scl/fi/s7i3v4weorau1520bexan/main.pdf?rlkey=7m19gjj7heujq4jqck7wuhaic&st=pwke8ykf&dl=0"
 - date: "Aug 2026"
   text: "Paper on [cycloplegic refraction prediction](/publication/2026-08-25-cycloplegic-refraction-prediction) published in *Ophthalmology and Therapy*."
+  pub: 2026-08-25-cycloplegic-refraction-prediction
 - date: "Aug 2026"
   text: "Paper on [uncertainty-aware DRAM equalization](/publication/2026-08-01-distributional-rl-dram-equalization) published in *IEEE TCPMT*."
+  pub: 2026-08-01-distributional-rl-dram-equalization
 - date: "Jul 2026"
   text: "Paper on [multi-lane DRAM equalization](/publication/2026-01-01-multilane-dram-equalization) accepted in *IEEE TCPMT*."
+  pub: 2026-01-01-multilane-dram-equalization
 - date: "Jun 2026"
   text: "Paper on [memory-augmented LLMs](/publication/2026-01-01-memory-augmented-llm-context) accepted in *IEEE Transactions on Artificial Intelligence*."
+  pub: 2026-01-01-memory-augmented-llm-context
 - date: "May 2026"
-  text: "Preprint of [Convergence Without Understanding](/publication/2026-01-01-convergence-without-understanding) released on [arXiv](https://arxiv.org/abs/2605.23315)."
+  text: "Preprint of [Convergence Without Understanding](/publication/2026-01-01-convergence-without-understanding) released on arXiv."
+  pub: 2026-01-01-convergence-without-understanding
 - date: "May 2026"
-  text: "Recognized as a [Gold Reviewer](https://icml.cc/Conferences/2026) for ICML 2026."
+  text: "Recognized as a Gold Reviewer for ICML 2026."
+  links:
+    - label: "ICML 2026"
+      url: "https://icml.cc/Conferences/2026"
 - date: "Mar 2026"
   text: "Paper on [portable fundus camera validation](/publication/2026-03-11-eyerobo-fundus-camera-validation) published in *Ophthalmology and Therapy*."
+  pub: 2026-03-11-eyerobo-fundus-camera-validation
 - date: "Jan 2026"
   text: "Paper on [retinal image super-resolution](/publication/2025-01-01-retinal-superresolution-dual-transformer) published in *Frontiers in Medicine*."
+  pub: 2025-01-01-retinal-superresolution-dual-transformer
 - date: "Dec 2025"
   text: "Filed a [patent application](/publication/2025-12-29-biosignal-health-monitoring-patent) on biosignal-based patient health monitoring."
 - date: "Oct 2025"
   text: "Joined [Braindeck Inc.](https://www.braindeck.net/) as AI Initiative Team Lead."
 - date: "Sep 2025"
   text: "[ARD-LoRA](/publication/2025-01-01-ard-lora) accepted in *IEEE Transactions on Artificial Intelligence*."
+  pub: 2025-01-01-ard-lora
 - date: "Aug 2025"
   text: "Filed a [patent application](/publication/2025-08-26-dram-equalizer-patent) with Samsung Electronics and KAIST on equalizer optimization."
