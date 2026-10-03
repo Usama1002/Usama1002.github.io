@@ -1,5 +1,7 @@
 # Newest first. `text` is Markdown; keep each item to one short sentence.
 - date: "Sep 2026"
+  text: "Paper on [capability preservation during GRPO reasoning training](/publication/2026-09-28-grpo-tax) published in *Transactions on Machine Learning Research* ([code](https://github.com/Usama1002/GRPO-Capability-Tax))."
+- date: "Sep 2026"
   text: "Paper on [graph-guided layer fusion for LLM compression](/publication/2026-01-01-graph-guided-layer-fusion-neurips) accepted at NeurIPS 2026."
 - date: "Sep 2026"
   text: "Paper on [pediatric myopia progression prediction](/publication/2026-09-26-pediatric-myopia-progression) published in *Journal of Translational Medicine*."
