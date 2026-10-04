@@ -7,5 +7,5 @@ excerpt: 'A graph-guided layer-fusion method for compressing large language mode
 date: 2026-01-01
 venue: 'Conference on Neural Information Processing Systems (NeurIPS)'
 codeurl: 'https://github.com/Usama1002/fcm-layer-fusion'
-citation: '<strong>M. Usama</strong> and S. Y. Jung, &quot;Beyond Adjacent Layers: Graph-Guided Layer Fusion for Compressing Large Language Models,&quot; <i>Conference on Neural Information Processing Systems (NeurIPS)</i>, 2026.'
+citation: '<strong>M. Usama</strong> and Y. Jung, &quot;Beyond Adjacent Layers: Graph-Guided Layer Fusion for Compressing Large Language Models,&quot; <i>Conference on Neural Information Processing Systems (NeurIPS)</i>, 2026.'
 ---
