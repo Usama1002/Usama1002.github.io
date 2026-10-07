@@ -4,6 +4,7 @@ title: "Muhammad Usama"
 excerpt: "Muhammad Usama - AI Initiative Team Lead, Braindeck Inc."
 author_profile: true
 body_class: home-with-news
+seoul_city: true
 ---
 
 <div class="home-grid" markdown="1">

@@ -1,0 +1,13 @@
+{% include base_path %}
+<div class="seoul-band__spacer" aria-hidden="true"></div>
+<div id="seoul-city" class="seoul-band" data-nosnippet>
+  <div class="seoul-band__scene">
+    <div class="seoul-band__fade" aria-hidden="true"></div>
+  </div>
+</div>
+<div class="seoul-band__bar" data-nosnippet>
+  <span class="seoul-band__clock">Seoul &middot; <span data-seoul-clock>KST</span></span>
+  <button type="button" class="seoul-band__toggle" data-seoul-toggle aria-expanded="true" aria-controls="seoul-city">Hide</button>
+</div>
+<div class="seoul-band__tip" data-seoul-tip aria-hidden="true"></div>
+<script defer src="{{ base_path }}/assets/js/seoul-city.js"></script>

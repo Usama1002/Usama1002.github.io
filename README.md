@@ -13,6 +13,7 @@ Personal academic website, built on the [Academic Pages](https://github.com/acad
 - `_data/news.yml` - the News column on the home page, newest first. Each item has a `date` (e.g. "Sep 2026") and a one-sentence Markdown `text`. Add `pub: <publication slug>` to show that paper's [Paper]/[arXiv] and [Code] links automatically, or `links:` (label/url pairs) for non-paper items. The column scrolls, so older items can stay.
 - `files/Muhammad-Usama-CV.pdf` - downloadable PDF CV (a website-specific build), linked from the home and Experience pages.
 - `images/profile.jpg` - sidebar photo.
+- `assets/js/seoul-city.js` - the animated pixel-art Seoul strip fixed along the bottom of the home page (drawn entirely in code, no image assets). It is enabled by `seoul_city: true` in a page's front matter, included via `_includes/seoul-band.html` and styled in `_sass/layout/_seoul.scss`. It shows the day city in the light theme and the night city in the dark theme; the trees follow the season in Seoul. Preview overrides: `?time=night` and `?season=spring|summer|autumn|winter`.
 
 ## Adding a new publication
 
