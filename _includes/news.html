@@ -12,7 +12,8 @@
       <span class="news__text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
       {% if pub.paperurl or pub.arxivurl or pub.codeurl or item.links %}
       <span class="news__links">
-        {% if pub.paperurl %}<a href="{{ pub.paperurl }}">Paper</a>{% elsif pub.arxivurl %}<a href="{{ pub.arxivurl }}">arXiv</a>{% endif %}
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}">Paper</a>{% endif %}
+        {% if pub.arxivurl %}<a href="{{ pub.arxivurl }}">arXiv</a>{% endif %}
         {% if pub.codeurl %}<a href="{{ pub.codeurl }}">Code</a>{% endif %}
         {% for link in item.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
       </span>

@@ -1,6 +1,6 @@
 # Newest first. `text` is one short Markdown sentence.
-# `pub` (optional): a publication slug in _publications/. Its paperurl (or arxivurl) and codeurl
-#   are shown as [Paper]/[arXiv] and [Code] links after the text.
+# `pub` (optional): a publication slug in _publications/. Its paperurl, arxivurl and codeurl
+#   (whichever exist) are shown as [Paper], [arXiv] and [Code] links after the text.
 # `links` (optional): extra links for items that are not publications, as {label, url}.
 - date: "Oct 2026"
   text: "Paper on [evidential multimodal emotion recognition with Dempster-Shafer fusion](/publication/2026-10-09-evidential-emotion-recognition) published in *IEEE Transactions on Affective Computing*."
