@@ -1,0 +1,50 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.summary | default: page.excerpt | strip_html | strip }}">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.summary | default: page.excerpt | strip_html | strip }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  {% if page.og_image %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.og_image }}">
+  <meta name="twitter:card" content="summary_large_image">{% endif %}
+  <link rel="icon" href="{{ site.baseurl }}/images/favicon.ico">
+  <script>
+    // Follow the theme chosen elsewhere on the site (same localStorage key as assets/js/_main.js).
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  {% for css in page.project_css %}<link rel="stylesheet" href="{{ site.baseurl }}{{ css }}">
+  {% endfor %}
+</head>
+<body>
+  <nav class="topbar">
+    <a href="{{ site.baseurl }}/">{{ site.author.name }}</a>
+    <span class="topbar__links">
+      <a href="{{ site.baseurl }}/publications/">Publications</a>
+      <button type="button" id="theme-toggle" aria-label="Switch between light and dark theme">Dark theme</button>
+    </span>
+  </nav>
+
+  {{ content }}
+
+  <footer class="foot">
+    <p><a href="{{ site.baseurl }}/">{{ site.author.name }}</a>, {{ site.author.employer }}</p>
+  </footer>
+
+  {% for js in page.project_js %}<script src="{{ site.baseurl }}{{ js }}" defer></script>
+  {% endfor %}
+</body>
+</html>

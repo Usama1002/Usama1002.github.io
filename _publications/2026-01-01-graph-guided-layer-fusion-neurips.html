@@ -1,0 +1,153 @@
+---
+title: "Beyond Adjacent Layers: Graph-Guided Layer Fusion for Compressing Large Language Models"
+short_title: "Beyond Adjacent Layers"
+collection: publications
+category: conferences
+permalink: /publication/2026-01-01-graph-guided-layer-fusion-neurips
+layout: project
+excerpt: 'A graph-guided layer-fusion method for compressing large language models that goes beyond merging only adjacent layers.'
+summary: "Layers that do similar work in an LLM are often far apart in depth. FCM groups them with community detection on the full layer-similarity graph and keeps one layer per group. NeurIPS 2026."
+date: 2026-01-01
+venue: 'Conference on Neural Information Processing Systems (NeurIPS)'
+arxivurl: 'https://arxiv.org/abs/2610.15159'
+codeurl: 'https://github.com/Usama1002/fcm-layer-fusion'
+og_image: /assets/fcm/og.jpg
+project_css: [/assets/fcm/fcm.css]
+project_js: [/assets/fcm/fcm.js]
+citation: '<strong>M. Usama</strong> and Y. Jung, &quot;Beyond Adjacent Layers: Graph-Guided Layer Fusion for Compressing Large Language Models,&quot; <i>Conference on Neural Information Processing Systems (NeurIPS)</i>, 2026.'
+---
+<main class="paper">
+
+<header class="masthead-paper">
+  <p class="venue">NeurIPS 2026, poster</p>
+  <h1><span class="t1">Beyond Adjacent Layers</span> <span class="t2">Graph-Guided Layer Fusion for Compressing Large Language Models</span></h1>
+  <p class="authors"><a href="/">Muhammad Usama</a> and Yeoreum Jung</p>
+  <p class="affil">Braindeck Inc., Seoul</p>
+  <p class="actions">
+    <a class="btn" href="https://arxiv.org/abs/2610.15159">Paper on arXiv</a>
+    <a class="btn" href="https://arxiv.org/pdf/2610.15159">PDF</a>
+    <a class="btn" href="https://github.com/Usama1002/fcm-layer-fusion">Code</a>
+    <a class="btn" href="#citation">Cite</a>
+  </p>
+</header>
+
+<p class="lead">Most depth-compression methods for LLMs judge layers one at a time, or only merge layers that sit next to each other. We measured the similarity between every pair of layers in thirteen models and found that most pairs of highly similar layers are not neighbours. FCM (Fusion via Community Mining) treats the layers as a graph, splits it into communities of similar layers, and keeps one layer from each. At half the depth it gives lower perplexity than ShortGPT on twelve of the thirteen models.</p>
+
+<figure class="wide teaser">
+  <picture>
+    <source srcset="/assets/fcm/overview.webp" type="image/webp">
+    <img src="/assets/fcm/overview.png" width="2000" height="800" alt="FCM pipeline in three panels: a layer similarity matrix, layers grouped into communities that include non-adjacent layers, and one kept layer per community followed by LoRA recovery.">
+  </picture>
+  <figcaption>The FCM pipeline. Profile the similarity between all pairs of layers, find communities in that graph (a community can span distant layers), keep the highest Block Influence layer of each community, and recover with LoRA.</figcaption>
+</figure>
+
+<section id="structure">
+<h2>Most similar layer pairs are not neighbours</h2>
+
+<p>Pick a model from the list. The matrix shows linear CKA between the mean-pooled outputs of every pair of decoder blocks, measured on 512 C4 samples. The cells just off the diagonal are adjacent pairs, which is all that adjacent-merging methods look at. Everything else is a non-adjacent pair. Move the threshold to see how the two counts change (the paper uses 0.80), and tick the box to fade the pairs below it.</p>
+
+<figure class="wide explorer" id="explorer">
+  <div class="explorer__grid">
+    <div class="explorer__models">
+      <p class="fig-label" id="ratio-label">Ratio of non-adjacent to adjacent pairs</p>
+      <div id="ratio-chart" role="listbox" aria-labelledby="ratio-label"></div>
+    </div>
+    <div class="explorer__matrix">
+      <div class="controls">
+        <label for="thr">Threshold <output id="thr-out" for="thr">0.80</output></label>
+        <input type="range" id="thr" min="0.50" max="0.99" step="0.01" value="0.80">
+        <label class="check"><input type="checkbox" id="fade"> Fade pairs below the threshold</label>
+      </div>
+      <div id="heatmap"></div>
+      <p class="readout" id="readout" aria-live="polite"></p>
+    </div>
+  </div>
+  <figcaption>Counts are recomputed in your browser from the released similarity matrices and match Table 2 of the paper at 0.80. The two 14B models are in the paper's table but their matrices are not part of this page, so their rows cannot be opened.</figcaption>
+</figure>
+
+<p>The structure is easiest to see in Qwen2.5-7B. Layers 0 to 2 have a CKA of about 0.7 with the last layers of the network and about 0.1 with layer 5. The model works in phases (an early embedding phase, a long middle block, and an output phase that drifts back toward the embedding subspace), and those phases are not contiguous ranges of depth. A method that only compares neighbours never sees this, and a method that groups contiguous segments cannot represent it.</p>
+</section>
+
+<section id="method">
+<h2>How FCM works</h2>
+
+<ol class="steps">
+  <li><strong>Profile.</strong> Run 512 calibration samples through the model and build the full L&times;L similarity matrix. FCM uses cosine similarity by default and switches to CKA when the cosine partition is degenerate (one community swallowing most layers, or very unbalanced sizes). That rule uses only calibration data, with thresholds fixed in advance.</li>
+  <li><strong>Group.</strong> Treat the matrix as a weighted graph and split it into K communities with spectral clustering. K comes from the target ratio (K = L/2 at 2&times;), so there is no similarity cutoff to tune. A community may contain layers from opposite ends of the network.</li>
+  <li><strong>Keep one per community.</strong> Within each community, keep the layer with the highest Block Influence (the layer that changes its input the most) with its original weights, and drop the others. Then heal the model with LoRA (rank 16, 500 steps), the same recovery every baseline in our comparison receives.</li>
+</ol>
+
+<p>The choice in step 3 matters more than it looks. Keeping the most central layer of each community, the one most similar to its peers, sounds reasonable but keeps exactly the most redundant layer. On LLaMA-3.1-8B that variant reaches a perplexity of 449.88; keeping the highest Block Influence layer of the same communities gives 35.25.</p>
+
+<p>Profiling adds about 11.5 seconds on Qwen2.5-7B, roughly 1.4% of the full offline pipeline, which is dominated by LoRA recovery.</p>
+</section>
+
+<section id="results">
+<h2>Results at 2&times; compression</h2>
+
+<p>All methods below get the same 512 calibration samples and the same LoRA recovery, so the comparison isolates which layers each method keeps. Values are WikiText-2 perplexity, mean over three seeds; lower is better. Hover a row for the exact numbers.</p>
+
+<figure class="wide">
+  <div class="legend" id="h2h-legend"></div>
+  <div id="h2h" class="chart"></div>
+  <details class="tableview"><summary>Show as a table</summary><div id="h2h-table"></div></details>
+  <figcaption>FlattenGPT and SWM diverge on Mistral-7B (4962 and 471.5), so those two points are drawn at the right edge. The Mistral FCM point uses mean-pooled CKA, as in the paper's headline result.</figcaption>
+</figure>
+
+<p>FCM has the lowest perplexity on ten of the thirteen models, and each of those ten wins is significant against every baseline (Welch's t-test with Holm&ndash;Bonferroni correction). On LLaMA-3.2-3B and SmolLM3-3B it still has the lowest mean, but the margin is within seed noise. Its mean rank across the suite is 1.15, against 2.15 for DeltaLLM, the strongest baseline. Against ShortGPT alone, FCM is lower on twelve of thirteen models, significantly so on ten, with the largest reduction on Qwen3-4B (116.20 to 58.15).</p>
+
+<p>The compressed models are smaller and faster in practice. Halving Qwen2.5-7B removes 46% of its parameters, lowers peak VRAM by 42%, and raises decode throughput by 84% on a single A100.</p>
+
+<h3>Beyond 2&times;</h3>
+
+<p>At 1.5&times; every method keeps about two thirds of the layers, there is plenty of redundancy to remove, and DeltaLLM or ShortGPT edges out FCM by at most 0.6 perplexity. From 2&times; onward the baselines degrade much faster, and the gap keeps growing up to 3&times; on all three models we swept.</p>
+
+<figure class="wide">
+  <div class="legend" id="sweep-legend"></div>
+  <div id="sweep" class="chart small-multiples"></div>
+  <details class="tableview"><summary>Show as a table</summary><div id="sweep-table"></div></details>
+  <figcaption>WikiText-2 perplexity against compression ratio, log scale, mean over three seeds.</figcaption>
+</figure>
+
+<h3>Downstream tasks</h3>
+
+<p>The perplexity gains carry over to accuracy. On five zero-shot reasoning benchmarks (ARC-Easy, ARC-Challenge, HellaSwag, WinoGrande, PIQA), FCM beats ShortGPT on all fifteen benchmark results for the Qwen and LLaMA models. Mistral-7B goes the other way, as it does for perplexity.</p>
+
+<div class="table-wrap">
+<table class="data">
+  <caption>Mean zero-shot accuracy (%) over the five benchmarks at 2&times; compression.</caption>
+  <thead><tr><th scope="col">Model</th><th scope="col">Uncompressed</th><th scope="col">ShortGPT</th><th scope="col">FCM</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Qwen2.5-7B</th><td>72.94</td><td>49.34</td><td class="best">55.54</td></tr>
+    <tr><th scope="row">LLaMA-3.1-8B</th><td>74.58</td><td>52.18</td><td class="best">54.92</td></tr>
+    <tr><th scope="row">Qwen2.5-14B</th><td>78.34</td><td>58.66</td><td class="best">63.22</td></tr>
+    <tr><th scope="row">Mistral-7B</th><td>73.72</td><td class="best">53.76</td><td>51.10</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>FCM also improves 5-shot MMLU by 6.2 to 10.6 points over ShortGPT. On Qwen2.5-7B it halves LAMBADA generative perplexity (8.65 against 18.42) and raises HumanEval pass@1 from 18.5% to 29.8%.</p>
+</section>
+
+<section id="limits">
+<h2>Where it does not win</h2>
+
+<p>Mistral-7B is the one clear loss, where FCM is 13.4% worse than ShortGPT. Mistral uses sliding-window attention, so how similar two layers are depends on token position, and mean pooling over positions throws that signal away. On Mistral, 68.4% of the cross-position activation variance sits in the top 5% of positions, against 14 to 16% on the other models. Computing CKA over all tokens instead of mean-pooled ones narrows the gap to 5.3% but does not close it.</p>
+
+<p>We have only tested decoder-only models, and long-context behaviour beyond 2048 tokens and mathematical reasoning were not measured. The paper's limitations section lists the remaining gaps, including baselines we could not run under matched recovery.</p>
+</section>
+
+<section id="citation">
+<h2>Citation</h2>
+<div class="bib">
+<button type="button" class="copy" data-copy="bibtex">Copy</button>
+<pre id="bibtex">@inproceedings{usama2026beyond,
+  title     = {Beyond Adjacent Layers: Graph-Guided Layer Fusion for Compressing Large Language Models},
+  author    = {Usama, Muhammad and Jung, Yeoreum},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026}
+}</pre>
+</div>
+</section>
+
+</main>

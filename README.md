@@ -15,6 +15,10 @@ Personal academic website, built on the [Academic Pages](https://github.com/acad
 - `images/profile.jpg` - sidebar photo.
 - `assets/js/seoul-city.js` - the animated pixel-art Seoul strip fixed along the bottom of the home page (drawn entirely in code, no image assets). It is enabled by `seoul_city: true` in a page's front matter, included via `_includes/seoul-band.html` and styled in `_sass/layout/_seoul.scss`. It shows the day city in the light theme and the night city in the dark theme; the trees follow the season in Seoul. Preview overrides: `?time=night` and `?season=spring|summer|autumn|winter`.
 
+## Project pages
+
+A publication can have a full project page instead of the default single-paper layout. Set `layout: project` in its front matter and write the page body as HTML (name the file `.html` so it is not run through Markdown). `_layouts/project.html` is a standalone layout without the sidebar; it follows the site's light/dark theme setting, and per-page `project_css`, `project_js` and `og_image` front matter fields load the page's own assets. The NeurIPS 2026 paper (`_publications/2026-01-01-graph-guided-layer-fusion-neurips.html`) is the first one; its styles, script, CKA matrices and figure live in `assets/fcm/`.
+
 ## Adding a new publication
 
 Copy an existing file in `_publications/`, rename it `YYYY-MM-DD-slug.md`, and update the front matter and citation. It will automatically appear on the Publications page.
