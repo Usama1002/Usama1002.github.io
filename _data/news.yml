@@ -3,6 +3,9 @@
 #   (whichever exist) are shown as [Paper], [arXiv] and [Code] links after the text.
 # `links` (optional): extra links for items that are not publications, as {label, url}.
 - date: "Oct 2026"
+  text: "Paper on [latent representation learning for anomaly detection in high-speed signals](/publication/2026-10-30-latent-representations-signal-integrity) accepted in *IEEE TCAD*."
+  pub: 2026-10-30-latent-representations-signal-integrity
+- date: "Oct 2026"
   text: "Paper on [evidential multimodal emotion recognition with Dempster-Shafer fusion](/publication/2026-10-09-evidential-emotion-recognition) published in *IEEE Transactions on Affective Computing*."
   pub: 2026-10-09-evidential-emotion-recognition
 - date: "Sep 2026"
