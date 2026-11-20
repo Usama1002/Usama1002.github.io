@@ -3,6 +3,9 @@
 #   (whichever exist) are shown as [Paper], [arXiv] and [Code] links after the text.
 # `links` (optional): extra links for items that are not publications, as {label, url}.
 - date: "Nov 2026"
+  text: "Paper on [a time-aware transformer for forecasting pediatric myopia progression](/publication/2026-11-16-time-aware-transformer-myopia) published in *Journal of Translational Medicine*."
+  pub: 2026-11-16-time-aware-transformer-myopia
+- date: "Nov 2026"
   text: "Paper on [latent representation learning for anomaly detection in high-speed signals](/publication/2026-10-30-latent-representations-signal-integrity) published in *IEEE TCAD*."
   pub: 2026-10-30-latent-representations-signal-integrity
 - date: "Oct 2026"
